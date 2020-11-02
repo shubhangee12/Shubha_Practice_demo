@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Functional Automation Test Case for Testing Balzedemo" preserve-order="false" parallel="false" thread-count="1">
+    <test name="Blazedemo Automation Testing">
+        <classes>
+            <class name="Blazedemo.Test.FlightBookingTest"></class>
+        </classes>
+    </test>
+</suite>

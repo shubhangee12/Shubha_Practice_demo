@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Non Automated Functional Test Scenarios : for Guest User" verbose="1">
+    <test name="Tc02: Verify Failure to select Departure City when Invalid city/city not exist in list provided in input"></test>
+    <test name="TC03:Verify Failure to select Destination City when Invalid city/city not exist in list provided "></test>
+    <test name="TC04:Verification of Departure City and Destination City on Choose Flight Screen"></test>
+    <test name="TC05:Verification of Airline name, Flight Number, Price and Total Cost in Passenger Details Screen as on confirmation Screen"></test>
+    <test name="TC06:Verify error Message when invalid input Values given in Passenger details"></test>
+    <test name="TC07:Verify Link 'Home' on Homepage are clickable"></test>
+    <test name="TC08:Verify Link 'Travel to the World' is Clickable and opening new Page/link"></test>
+    <test name="TC09:Verify Link 'destination of the week ! The Beach !' is Clickable and opening new Page"></test>
+
+</suite>
+
+
+

@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "b0b9ab1e-83d6-45ec-96a8-b48e55aa5a12",
+		"name": "API_Space_X",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Positive Scenarios",
+			"item": [
+				{
+					"name": "TestCase1:Verify endpoint is valid when hit with valid method and reponse code is sucess",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "910f7305-bd60-469f-a8e9-73dae35649c3",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.spacexdata.com/v4/launches/latest",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacexdata",
+								"com"
+							],
+							"path": [
+								"v4",
+								"launches",
+								"latest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestCase2:Verify Response body for Successful response",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f7d5e4b1-a216-4dc0-95f3-deba5e9712f3",
+								"exec": [
+									"const body = pm.response.json();\r",
+									"pm.test(\"Reponse JSON body validation\", function() {\r",
+									"\r",
+									"    pm.expect(body).to.have.property(\"fairings\");\r",
+									"    pm.expect(body).to.have.property(\"links\");\r",
+									"    pm.expect(body).to.have.property(\"static_fire_date_utc\");\r",
+									"    pm.expect(body).to.have.property(\"static_fire_date_unix\");\r",
+									"    pm.expect(body).to.have.property(\"tbd\");\r",
+									"    pm.expect(body).to.have.property(\"net\");\r",
+									"    pm.expect(body).to.have.property(\"window\");\r",
+									"    pm.expect(body).to.have.property(\"rocket\");\r",
+									"    pm.expect(body).to.have.property(\"success\");\r",
+									"    pm.expect(body).to.have.property(\"details\");\r",
+									"    pm.expect(body).to.have.property(\"crew\");\r",
+									"    pm.expect(body).to.have.property(\"ships\");\r",
+									"    pm.expect(body).to.have.property(\"capsules\");\r",
+									"    pm.expect(body).to.have.property(\"payloads\");\r",
+									"    pm.expect(body).to.have.property(\"launchpad\");\r",
+									"    pm.expect(body).to.have.property(\"auto_update\");\r",
+									"    pm.expect(body).to.have.property(\"failures\");\r",
+									"    pm.expect(body).to.have.property(\"flight_number\");\r",
+									"    pm.expect(body).to.have.property(\"name\");\r",
+									"    pm.expect(body).to.have.property(\"date_utc\");\r",
+									"    pm.expect(body).to.have.property(\"date_unix\");\r",
+									"    pm.expect(body).to.have.property(\"date_local\");\r",
+									"    pm.expect(body).to.have.property(\"date_precision\");\r",
+									"    pm.expect(body).to.have.property(\"upcoming\");\r",
+									"    pm.expect(body).to.have.property(\"cores\");\r",
+									"    pm.expect(body).to.have.property(\"id\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.spacexdata.com/v4/launches/latest",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacexdata",
+								"com"
+							],
+							"path": [
+								"v4",
+								"launches",
+								"latest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestCase3:Verfiy Repsonse code and Response body is same when API hit mutiple times",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1aebed97-db81-4d4c-92f1-1c83259d6555",
+								"exec": [
+									"const body = pm.response.json();\r",
+									"pm.test(\"Reponse JSON body validation\", function() {\r",
+									"\r",
+									"    pm.expect(body).to.have.property(\"fairings\");\r",
+									"    pm.expect(body).to.have.property(\"links\");\r",
+									"    pm.expect(body).to.have.property(\"static_fire_date_utc\");\r",
+									"    pm.expect(body).to.have.property(\"static_fire_date_unix\");\r",
+									"    pm.expect(body).to.have.property(\"tbd\");\r",
+									"    pm.expect(body).to.have.property(\"net\");\r",
+									"    pm.expect(body).to.have.property(\"window\");\r",
+									"    pm.expect(body).to.have.property(\"rocket\");\r",
+									"    pm.expect(body).to.have.property(\"success\");\r",
+									"    pm.expect(body).to.have.property(\"details\");\r",
+									"    pm.expect(body).to.have.property(\"crew\");\r",
+									"    pm.expect(body).to.have.property(\"ships\");\r",
+									"    pm.expect(body).to.have.property(\"capsules\");\r",
+									"    pm.expect(body).to.have.property(\"payloads\");\r",
+									"    pm.expect(body).to.have.property(\"launchpad\");\r",
+									"    pm.expect(body).to.have.property(\"auto_update\");\r",
+									"    pm.expect(body).to.have.property(\"failures\");\r",
+									"    pm.expect(body).to.have.property(\"flight_number\");\r",
+									"    pm.expect(body).to.have.property(\"name\");\r",
+									"    pm.expect(body).to.have.property(\"date_utc\");\r",
+									"    pm.expect(body).to.have.property(\"date_unix\");\r",
+									"    pm.expect(body).to.have.property(\"date_local\");\r",
+									"    pm.expect(body).to.have.property(\"date_precision\");\r",
+									"    pm.expect(body).to.have.property(\"upcoming\");\r",
+									"    pm.expect(body).to.have.property(\"cores\");\r",
+									"    pm.expect(body).to.have.property(\"id\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.spacexdata.com/v4/launches/latest",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacexdata",
+								"com"
+							],
+							"path": [
+								"v4",
+								"launches",
+								"latest"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Negative Scenarios",
+			"item": [
+				{
+					"name": "TestCase1:Verify Reponse code when endpoint in invalid and method is valid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "228fd6fc-ff6d-4769-a424-c470a4fb9f09",
+								"exec": [
+									"pm.test(\"Error Reponse for Incorrect URL\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.spacexdata.com/v4/launches/las",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacexdata",
+								"com"
+							],
+							"path": [
+								"v4",
+								"launches",
+								"las"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestCase2:Verify Reponse code when endpoint is valid and method is invalid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c814b5f9-b3ab-4eeb-81aa-f3b7f94dc6a9",
+								"exec": [
+									"pm.test(\"Error Reponse for Incorrect URL\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.spacexdata.com/v4/launches/latest",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacexdata",
+								"com"
+							],
+							"path": [
+								"v4",
+								"launches",
+								"latest"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

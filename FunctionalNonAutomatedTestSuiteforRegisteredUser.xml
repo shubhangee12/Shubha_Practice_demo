@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Non Automated Functional Test Scenarios : for Registered User User" verbose="1">
+    <test name="TC01:Verify Error Message on 'https://blazedemo.com/login' when clicked on Login with Email and Password Values Null"></test>
+    <test name="TC02:Verify Error Message on 'https://blazedemo.com/login' when clicked on Login with Invalid Email
+Values like abcd, @abcd , abcd@ "></test>
+    <test name="TC03:Verify Error Message on 'https://blazedemo.com/login' when clicked on Login with Valid Email and Password Empty"></test>
+    <test name="TC04:Verify Login Failure with User email is  not registered"></test>
+    <test name="TC05:Verify 'Register' link is working and user regiration page is launched"></test>
+    <test name="TC06:Verify 'Login' link is working and Login screen is launched"></test>
+    <test name="TC07:Verify on Register Screen when clicked on Register with name,company,email address ,password and confirm password Empty"></test>
+    <test name="TC08:Verify Error Message on Register Screen when any of field is empty "></test>
+    <test name="TC09:Verify Error Message for invalid email ID entered on Register Screen"></test>
+    <test name="TC10:Verify Successful Flight booking and confirmation ID when Valid Departure city and Destnation city provided in input for Registered User"></test>
+    <test name="TC11:Verify error Message when invalid input Values given in Passenger details for Registered User"></test>
+    <test name="TC12:Verify Link 'Home' on Homepage are clickable for Registered User"></test>
+    <test name="TC13:Verify Link 'Travel to the World' is Clickable and opening new Page for Registered User"></test>
+    <test name="TC14:Verify Link 'destination of the week ! The Beach !' is Clickable and opening new Page for Registered User"></test>
+    <test name="TC15:Verify'Forgot Password' Link is clickable and launched Reset Password page"></test>
+    <test name="TC16:Verify Error Message when clicked on Send Password Reset Link with email address empty"></test>
+    <test name="TC17:Verify Error Message for invalid email ID entered on Reset Password Page"></test>
+    <test name="TC18:Verify Error Message for email ID not registered entered on Reset Password Page"></test>
+    <test name="TC19:Verfiy Sucess Message for email ID already registered entered on Reset Password Page"></test>
+
+</suite>
+
+
+

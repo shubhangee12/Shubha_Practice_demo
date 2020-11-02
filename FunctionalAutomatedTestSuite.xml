@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Automated Functional Test Scenarios: Guest User" verbose="1">
+    <test name="TC1:Verify Successful Flight booking and confirmation ID when Valid Departure city and Destnation city provided in input">
+        <classes>
+            <class name="Blazedemo.Test.FlightBookingTest">
+              </class>
+        </classes>
+    </test>
+</suite>
+
+
+
